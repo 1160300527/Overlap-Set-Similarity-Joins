@@ -9,6 +9,8 @@
 #include  "sizewareasfilter.h"
 #include  "scanCount.h"
 #include  "divideSkip.h"
+#include  "mergeSkip.h"
+
 FILE *  logFp;
 int  ** relS;
 int  *  sortedSet;
@@ -66,7 +68,7 @@ int main(int argc, char *argv[])
         ScanCountJoin(relS,thresh[i]);
         SizeAwareJoin(relS, thresh[i]);
         AllPairsJoin(relS, thresh[i]);
-        break;
+        MergeSkip(relS,thresh[i]);
         //newFilterAllPairsJoin(relS,10);
         //filterAndRefine(&stat,relS, thresh[i]);
     }

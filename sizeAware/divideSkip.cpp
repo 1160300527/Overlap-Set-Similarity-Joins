@@ -52,48 +52,44 @@ long long  DivideSkip(int** rel, int threshold)
     cout<<"Finish inverted"<<endl;
     //outputInverted(inverted);
 
+
+
     for(int i=1; i<=rel[0][0]; i++)
     {
-        if(rel[i][0]<threshold)
+        L=getParamL(inverted,rel,i,threshold);
+        L=0;
+        if(rel[i][0]<threshold||L==threshold)
         {
             continue;
         }
-//        L=getParamL(inverted,rel,i,threshold);
-//
-        inverted_short = (int **) malloc(sizeof(int *));
+        inverted_short = (int **) malloc((rel[i][0]-L+1)*sizeof(int *));
         inverted_short[0] = (int *) malloc(sizeof(int));
         inverted_short[0][0] = 0;
-//        heap = new InvertHeap(L);
-//        for(int j=1; j<=rel[i][0]; j++)
-//        {
-//            int *invert_list = heap->add(inverted[rel[i][j]]);
-//            if(invert_list!=NULL)
-//            {
-//                inverted_short[0][0] = inverted_short[0][0]+1;
-//                inverted_short = (int **) realloc(inverted_short,(inverted_short[0][0]+1)*sizeof(int*));
-//                inverted_short[inverted_short[0][0]] = invert_list;
-//            }
-//
-        for(int j = 1; j<=rel[i][0]; j++)
+        heap = new InvertHeap(L);
+        for(int j=1; j<=rel[i][0]; j++)
         {
-            inverted_short[0][0] = inverted_short[0][0]+1;
-            inverted_short = (int **) realloc(inverted_short,(inverted_short[0][0]+1)*sizeof(int*));
-            inverted_short[inverted_short[0][0]] = inverted[rel[i][j]];
+            int *invert_list = heap->add(inverted[rel[i][j]]);
+            if(invert_list!=NULL)
+            {
+                inverted_short[0][0] = inverted_short[0][0]+1;
+                inverted_short[inverted_short[0][0]] = invert_list;
+            }
         }
-        //candidate = MergeSkip(threshold-L,inverted_short,i);
-        candidate = MergeSkip(threshold,inverted_short,i);
-//        for(int j = 1; j <= candidate[0].num; j++)
-//        {
-//            if(heap->getTimes(candidate[j].id)+candidate[j].num>=threshold)
-//            {
-//                rValue+=1;
-//            }
-//        }
-        rValue+=candidate[0].num;
-//        free(candidate);
+        //outputInverted(inverted_short);
+        candidate = MergeSkip(threshold-L,inverted_short,i);
+//        cout<<candidate[0].num<<endl;
+        for(int j = 1; j <= candidate[0].num; j++)
+        {
+            int times = heap->getTimes(candidate[j].id);
+            if(times+candidate[j].num>=threshold)
+            {
+                rValue+=1;
+            }
+        }
+        free(candidate);
         free(inverted_short[0]);
         free(inverted_short);
-//        delete heap;
+        delete heap;
     }
 
     DivideSkipFreeInverted(inverted);
@@ -153,7 +149,6 @@ ShortSet* MergeSkip(int c,int **inverted,int R)
             }
             else
             {
-                t = top;
                 break;
             }
         }
@@ -180,6 +175,7 @@ ShortSet* MergeSkip(int c,int **inverted,int R)
         }
         else
         {
+            t = top;
             int m = n;
             n = 0;
             for(int i = 0; i<c-m-1; i++)
@@ -220,135 +216,6 @@ ShortSet* MergeSkip(int c,int **inverted,int R)
     return Rs;
 
 }
-//ShortSet* MergeSkip(int c,int **inverted,int R)
-//{
-//    priority_queue<SetInverted,vector<SetInverted>,greater<SetInverted>>H;
-//    vector<int> visit;
-//    int *start,*ending;
-//    ShortSet* Rs;
-//    SetInverted t,top;
-//    int n,invert_key,temp,index;
-//
-//    Rs=(ShortSet *)malloc(sizeof(ShortSet));
-//    Rs[0].num = 0;
-//
-//    start = (int *)malloc((inverted[0][0]+1)*sizeof(int));
-//    ending = (int *)malloc((inverted[0][0]+1)*sizeof(int));
-//    for(int i=1; i<=inverted[0][0]; i++)
-//    {
-//        ending[i]=inverted[i][0];
-//        start[i]=BinarySearchInvert(1,ending[i],inverted[i],(R+1));
-//        if(start[i]<=ending[i])
-//        {
-//            SetInverted v;
-//            v.inverted_list=i;
-//            v.value=inverted[i][start[i]];
-//            H.push(v);
-//            start[i]+=1;
-//        }
-//    }
-////    for(int i=1;i<=rel[R][0];i++)
-////    {
-////        //cout<<rel[R][i]<<"-";
-////        ending[i]=inverted[rel[R][i]][0];
-////        start[i]=BinarySearchInvert(1,ending[i],inverted[rel[R][i]],(R+1));
-////        //cout<<start[i]<<" ";
-////    }
-//    //cout<<endl;
-////    for(int i=1;i<=rel[R][0];i++)
-////    {
-////        if(start[i]<=ending[i])
-////        {
-////            SetInverted v;
-////            v.inverted_list=i;
-////            v.value=inverted[rel[R][i]][start[i]];
-////            H.push(v);
-////            start[i]+=1;
-////        }
-////    }
-//    if(H.size()<c)
-//    {
-//        free(start);
-//        free(ending);
-//        return Rs;
-//    }
-//    n=0;
-//    t=H.top();
-//    while(n+H.size()>=c)
-//    {
-//        while(!H.empty())
-//        {
-//            top=H.top();
-//            //cout<<top.value<<endl;
-//            if(top.value==t.value)
-//            {
-//                visit.push_back(top.inverted_list);
-//                H.pop();
-//                n++;
-//            }
-//            else
-//            {
-//                break;
-//            }
-//        }
-//        if(n>=c)
-//        {
-//            Rs[0].num = Rs[0].num + 1;
-//            Rs = (ShortSet *) realloc(Rs,(Rs[0].num+1)*sizeof(ShortSet));
-//            Rs[Rs[0].num].id = t.value;
-//            Rs[Rs[0].num].num = n;
-//            t.value = t.value+1;
-//            n=0;
-//        }
-//        else
-//        {
-//            int m=n;
-//            n=0;
-//            t = top;
-//            for(int j=0; j<c-m-1; j++)
-//            {
-//                if(H.empty())
-//                {
-//                    break;
-//                }
-//                top=H.top();
-//                H.pop();
-//                visit.push_back(top.inverted_list);
-//                if(t.value==top.value)
-//                {
-//                    n++;
-//                }
-//                else
-//                {
-//                    t=top;
-//                    n=0;
-//                }
-//            }
-//        }
-//        invert_key = t.value;//the id of set
-//        // cout<<invert_key<<":"<<endl;
-//        // cout<<H.size()<<" ";
-//        while(!visit.empty())
-//        {
-//            temp=visit.back();//invert table index
-//            visit.pop_back();
-//            index = BinarySearchInvert(start[temp],ending[temp],inverted[temp],invert_key);
-//            if(index<=ending[temp])
-//            {
-//                start[temp]=index+1;
-//                SetInverted v;
-//                v.inverted_list = temp;
-//                v.value = inverted[temp][index];
-//                //cout<<temp<<","<<index<<","<<v.value<<" ";
-//                H.push(v);
-//            }
-//        }
-//        //cout<<H.size()<<endl;
-//    }
-//    free(start);
-//    free(ending);
-//    return Rs;
-//}
 
 int BinarySearchInvert(int start,int ending,int *invert,int value)
 {
@@ -451,6 +318,10 @@ int getParamL(int **inverted,int **rel,int R,int t)
             max=inverted[rel[R][i]][0];
         }
     }
+    if(max==1)
+    {
+        return t;
+    }
     return (int)t/(param*log2(max)+1);
 }
 
@@ -482,6 +353,10 @@ InvertHeap::~InvertHeap()
 
 int* InvertHeap::add(int *List)
 {
+    if(_len==0)
+    {
+        return List;
+    }
     if(_size<_len)
     {
         int i;

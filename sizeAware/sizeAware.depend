@@ -170,3 +170,110 @@
 
 1586512645 f:\sizeaware\divideskip.h
 
+1554508266 source:f:\overlap-set-similarity-joins\sizeaware\allpairs.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"allPairs.h"
+	"dataload.h"
+
+1554380346 f:\overlap-set-similarity-joins\sizeaware\allpairs.h
+
+1581920334 f:\overlap-set-similarity-joins\sizeaware\dataload.h
+
+1583493446 source:f:\overlap-set-similarity-joins\sizeaware\dataload.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"dataload.h"
+
+1586530489 source:f:\overlap-set-similarity-joins\sizeaware\divideskip.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<math.h>
+	<iostream>
+	<queue>
+	"dataload.h"
+	"divideSkip.h"
+
+1586512645 f:\overlap-set-similarity-joins\sizeaware\divideskip.h
+
+1554529130 source:f:\overlap-set-similarity-joins\sizeaware\filter.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"filter.h"
+	"dataload.h"
+	"allPairs.h"
+
+1554516206 f:\overlap-set-similarity-joins\sizeaware\filter.h
+
+1586362010 source:f:\overlap-set-similarity-joins\sizeaware\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"filter.h"
+	"dataload.h"
+	"allPairs.h"
+	"sizeAware.h"
+	"sizewareasfilter.h"
+	"scanCount.h"
+	"divideSkip.h"
+
+1584629075 f:\overlap-set-similarity-joins\sizeaware\sizeaware.h
+
+1554629204 f:\overlap-set-similarity-joins\sizeaware\sizewareasfilter.h
+
+1584451106 f:\overlap-set-similarity-joins\sizeaware\scancount.h
+
+1586523940 source:f:\overlap-set-similarity-joins\sizeaware\scancount.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<math.h>
+	<iostream>
+	"dataload.h"
+	"scanCount.h"
+
+1584629109 source:f:\overlap-set-similarity-joins\sizeaware\sizeaware.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	<iostream>
+	"dataload.h"
+	"sizeAware.h"
+
+1584619822 source:f:\overlap-set-similarity-joins\sizeaware\sizeawareasfilter.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	<pthread.h>
+	"sizeAware.h"
+	"dataload.h"
+	"sizewareasfilter.h"
+	"allPairs.h"
+
+1586530481 source:f:\overlap-set-similarity-joins\sizeaware\mergeskip.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<iostream>
+	"divideSkip.h"
+	"mergeSkip.h"
+
+1586529463 f:\overlap-set-similarity-joins\sizeaware\mergeskip.h
+
