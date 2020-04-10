@@ -1,0 +1,172 @@
+# depslib dependency file v1.0
+1554508264 source:f:\papers\setcontainmentjoin\sizeaware\allpairs.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"allPairs.h"
+	"dataload.h"
+
+1554380345 f:\papers\setcontainmentjoin\sizeaware\allpairs.h
+
+1555050011 f:\papers\setcontainmentjoin\sizeaware\dataload.h
+
+1555397333 source:f:\papers\setcontainmentjoin\sizeaware\dataload.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"dataload.h"
+
+1555461502 source:f:\papers\setcontainmentjoin\sizeaware\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"filter.h"
+	"dataload.h"
+	"allPairs.h"
+	"sizeAware.h"
+	"sizewareasfilter.h"
+
+1554520501 f:\papers\setcontainmentjoin\sizeaware\sizeaware.h
+
+1554559045 source:f:\papers\setcontainmentjoin\sizeaware\sizeaware.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"dataload.h"
+	"sizeAware.h"
+
+1554529128 source:f:\papers\setcontainmentjoin\sizeaware\filter.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"filter.h"
+	"dataload.h"
+	"allPairs.h"
+
+1554516204 f:\papers\setcontainmentjoin\sizeaware\filter.h
+
+1554629202 f:\papers\setcontainmentjoin\sizeaware\sizewareasfilter.h
+
+1555398475 source:f:\papers\setcontainmentjoin\sizeaware\sizeawareasfilter.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	<pthread.h>
+	"sizeAware.h"
+	"dataload.h"
+	"sizewareasfilter.h"
+	"allPairs.h"
+
+1554508266 source:f:\sizeaware\allpairs.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"allPairs.h"
+	"dataload.h"
+
+1554380346 f:\sizeaware\allpairs.h
+
+1581920334 f:\sizeaware\dataload.h
+
+1583493446 source:f:\sizeaware\dataload.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"dataload.h"
+
+1554529130 source:f:\sizeaware\filter.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"filter.h"
+	"dataload.h"
+	"allPairs.h"
+
+1554516206 f:\sizeaware\filter.h
+
+1584629109 source:f:\sizeaware\sizeaware.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	<iostream>
+	"dataload.h"
+	"sizeAware.h"
+
+1584629075 f:\sizeaware\sizeaware.h
+
+1584619822 source:f:\sizeaware\sizeawareasfilter.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	<pthread.h>
+	"sizeAware.h"
+	"dataload.h"
+	"sizewareasfilter.h"
+	"allPairs.h"
+
+1554629204 f:\sizeaware\sizewareasfilter.h
+
+1586362010 source:f:\sizeaware\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	"filter.h"
+	"dataload.h"
+	"allPairs.h"
+	"sizeAware.h"
+	"sizewareasfilter.h"
+	"scanCount.h"
+	"divideSkip.h"
+
+1578650468 source:f:\sizeaware\hyperloglog.cpp
+	"hyperloglog.h"
+
+1578650412 f:\sizeaware\hyperloglog.h
+
+1584451106 f:\sizeaware\scancount.h
+
+1584629407 source:f:\sizeaware\scancount.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<math.h>
+	<iostream>
+	"dataload.h"
+	"scanCount.h"
+
+1586521366 source:f:\sizeaware\divideskip.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<math.h>
+	<iostream>
+	<queue>
+	"dataload.h"
+	"divideSkip.h"
+
+1586512645 f:\sizeaware\divideskip.h
+

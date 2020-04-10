@@ -1,0 +1,240 @@
+/***************************************/
+/***************************************/
+
+DATA LOADING....!
+RelationS is loeded!!
+    42045 elements are there in the universe of relationS!
+    337509 sets are there in relationS!
+DATA LOADING is loaded in 0.535000 seconds!
+uSize: 42045 
+avgFre: 14.0 devFre: 212.86  biasDegree: 88.82   peakDegree: 12027.59 
+minLowFre: 1 
+maxLowFre: 143 
+avgLowFre: 3.620214 
+devLowFre: 11.597198 
+lFrePos:   41448 
+minMiddleFre: 143 
+maxMiddleFre: 2565 
+avgMiddleFre: 528.198246 
+devMiddleFre: 492.905882 
+hFrePos:   42018 
+minHighFre: 2580 
+maxHighFre: 31719 
+avgHighFre: 5312.071429 
+devHighFre: 5411.351013 
+The cost to compute statistics is 0.004000 seconds!
+Turn at 40804-th element in 42045 elements with frequency: 48 
+average bias turn length: 1
+average length of sets in relation S: 1.777310 
+standard deviation of set length in relation S: 16.454376 
+PREPROCESSION is completed for 337509 sets in 0.562000 seconds!
+/***************************************/
+/***************************************/
+
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 9260647 results in 22.685000 seconds!
+           Processed     avoids 5403171 repeated candidate pairs 
+            verification removes 193949627 candidate pairs among 203210274 total
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+SizeAwareJoin algorithm generates 9260647 results in 447.959000 seconds!
+
+
+##################   FILTERandREFINE   ##########################
+filterANDrefine is ready to run........
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 9260647 results in 20.859000 seconds!
+           Processed     avoids 5403171 repeated candidate pairs 
+            verification removes 193949627 candidate pairs among 203210274 total
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 593297 results in 12.147000 seconds!
+           Processed     avoids 2753384 repeated candidate pairs 
+            verification removes 70189771 candidate pairs among 70783068 total
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+SizeAwareJoin algorithm generates 593297 results in 4.221000 seconds!
+
+
+##################   FILTERandREFINE   ##########################
+filterANDrefine is ready to run........
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 593297 results in 12.125000 seconds!
+           Processed     avoids 2753384 repeated candidate pairs 
+            verification removes 70189771 candidate pairs among 70783068 total
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 84009 results in 8.059000 seconds!
+           Processed     avoids 1500758 repeated candidate pairs 
+            verification removes 23841624 candidate pairs among 23925633 total
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+SizeAwareJoin algorithm generates 84009 results in 1.646000 seconds!
+
+
+##################   FILTERandREFINE   ##########################
+filterANDrefine is ready to run........
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 84009 results in 8.044000 seconds!
+           Processed     avoids 1500758 repeated candidate pairs 
+            verification removes 23841624 candidate pairs among 23925633 total
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 21174 results in 6.285000 seconds!
+           Processed     avoids 882840 repeated candidate pairs 
+            verification removes 9065378 candidate pairs among 9086552 total
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+SizeAwareJoin algorithm generates 21174 results in 2.313000 seconds!
+
+
+##################   FILTERandREFINE   ##########################
+filterANDrefine is ready to run........
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 21174 results in 6.287000 seconds!
+           Processed     avoids 882840 repeated candidate pairs 
+            verification removes 9065378 candidate pairs among 9086552 total
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 7745 results in 5.473000 seconds!
+           Processed     avoids 548719 repeated candidate pairs 
+            verification removes 3879021 candidate pairs among 3886766 total
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+SizeAwareJoin algorithm generates 7745 results in 2.520000 seconds!
+
+
+##################   FILTERandREFINE   ##########################
+filterANDrefine is ready to run........
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 7745 results in 5.470000 seconds!
+           Processed     avoids 548719 repeated candidate pairs 
+            verification removes 3879021 candidate pairs among 3886766 total
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 3458 results in 5.101000 seconds!
+           Processed     avoids 367739 repeated candidate pairs 
+            verification removes 1829226 candidate pairs among 1832684 total
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+SizeAwareJoin algorithm generates 3458 results in 2.753000 seconds!
+
+
+##################   FILTERandREFINE   ##########################
+filterANDrefine is ready to run........
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 3458 results in 5.102000 seconds!
+           Processed     avoids 367739 repeated candidate pairs 
+            verification removes 1829226 candidate pairs among 1832684 total
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 1788 results in 4.909000 seconds!
+           Processed     avoids 259389 repeated candidate pairs 
+            verification removes 978823 candidate pairs among 980611 total
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+SizeAwareJoin algorithm generates 1788 results in 2.755000 seconds!
+
+
+##################   FILTERandREFINE   ##########################
+filterANDrefine is ready to run........
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 1788 results in 4.903000 seconds!
+           Processed     avoids 259389 repeated candidate pairs 
+            verification removes 978823 candidate pairs among 980611 total
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 1006 results in 4.791000 seconds!
+           Processed     avoids 188436 repeated candidate pairs 
+            verification removes 562044 candidate pairs among 563050 total
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+SizeAwareJoin algorithm generates 1006 results in 2.672000 seconds!
+
+
+##################   FILTERandREFINE   ##########################
+filterANDrefine is ready to run........
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 1006 results in 4.800000 seconds!
+           Processed     avoids 188436 repeated candidate pairs 
+            verification removes 562044 candidate pairs among 563050 total
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 606 results in 4.723000 seconds!
+           Processed     avoids 142865 repeated candidate pairs 
+            verification removes 350057 candidate pairs among 350663 total
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+SizeAwareJoin algorithm generates 606 results in 2.510000 seconds!
+
+
+##################   FILTERandREFINE   ##########################
+filterANDrefine is ready to run........
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 606 results in 4.728000 seconds!
+           Processed     avoids 142865 repeated candidate pairs 
+            verification removes 350057 candidate pairs among 350663 total

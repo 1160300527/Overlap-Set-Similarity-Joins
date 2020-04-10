@@ -1,0 +1,554 @@
+/***************************************/
+/***************************************/
+
+DATA LOADING....!
+RelationS is loeded!!
+    102701 elements are there in the universe of relationS!
+    499999 sets are there in relationS!
+DATA LOADING is loaded in 1.109000 seconds!
+uSize: 102701 
+avgFre: 10.9 devFre: 90.86  biasDegree: 57.57   peakDegree: 6200.49 
+minLowFre: 1 
+maxLowFre: 24 
+avgLowFre: 2.886591 
+devLowFre: 3.854912 
+lFrePos:   96695 
+minMiddleFre: 24 
+maxMiddleFre: 675 
+avgMiddleFre: 96.073431 
+devMiddleFre: 105.530347 
+hFrePos:   102510 
+minHighFre: 677 
+maxHighFre: 13602 
+avgHighFre: 1451.140625 
+devHighFre: 1320.830636 
+The cost to compute statistics is 0.015000 seconds!
+Turn at 102339-th element in 102701 elements with frequency: 419 
+average bias turn length: 1
+average length of sets in relation S: 2.232808 
+standard deviation of set length in relation S: 6.499791 
+PREPROCESSION is completed for 499999 sets in 1.202000 seconds!
+/***************************************/
+/***************************************/
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:   2      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:1777917
+x:2,p=2042729,q=443924741
+Result generation:0
+x:3,p=1810475,q=373169614
+Result generation:0
+x:4,p=1906350,q=325641036
+Result generation:0
+x:5,p=6399000,q=290918586
+Result generation:0
+x:6,p=4212260,q=263771974
+Result generation:0
+x:7,p=6368439,q=241883712
+Result generation:0
+x:8,p=16475956,q=223718997
+Result generation:30577368
+x:9,p=55551516,q=208602771
+The size boundary is 9
+The number of big set is 15857
+The number of small set is 484142
+begin to process:4.654000
+To process the large set cost 14.730000 seconds!
+To process the small set cost 3.901000 seconds!
+finish to process:23.285000
+SizeAwareJoin algorithm generates 8295180 results in 23.363000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 12633777 results in 57.270000 seconds!
+           Processed     avoids 14839716 repeated candidate pairs 
+            verification removes 120377867 candidate pairs among 133011644 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:   4      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:4,p=152508,q=325641036
+Result generation:0
+x:5,p=1580000,q=290918586
+Result generation:0
+x:6,p=3564220,q=263771974
+Result generation:0
+x:7,p=4052643,q=241883712
+Result generation:0
+x:8,p=4287111,q=223718997
+Result generation:0
+x:9,p=11847804,q=208602771
+Result generation:282490
+x:10,p=10208715,q=195660442
+Result generation:0
+x:11,p=24161602,q=184676419
+The size boundary is 11
+The number of big set is 11806
+The number of small set is 488193
+begin to process:5.538000
+To process the large set cost 11.322000 seconds!
+To process the small set cost 0.534000 seconds!
+finish to process:17.394000
+SizeAwareJoin algorithm generates 1173474 results in 17.399000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 1242202 results in 41.741000 seconds!
+           Processed     avoids 10695364 repeated candidate pairs 
+            verification removes 45286986 candidate pairs among 46529188 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:   6      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:6,p=0,q=263771974
+Result generation:0
+x:7,p=413535,q=241883712
+Result generation:0
+x:8,p=672488,q=223718997
+Result generation:0
+x:9,p=1619484,q=208602771
+Result generation:0
+x:10,p=2589450,q=195660442
+Result generation:0
+x:11,p=8809826,q=184676419
+Result generation:0
+x:12,p=4751514,q=175133343
+Result generation:0
+x:13,p=17561016,q=166422108
+The size boundary is 13
+The number of big set is 9263
+The number of small set is 490736
+begin to process:5.652000
+To process the large set cost 9.599000 seconds!
+To process the small set cost 0.479000 seconds!
+finish to process:15.730000
+SizeAwareJoin algorithm generates 379488 results in 15.745000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 384622 results in 33.359000 seconds!
+           Processed     avoids 8377855 repeated candidate pairs 
+            verification removes 24884571 candidate pairs among 25269193 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:   8      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:8,p=0,q=223718997
+Result generation:0
+x:9,p=255708,q=208602771
+Result generation:0
+x:10,p=4056805,q=195660442
+Result generation:0
+x:11,p=1308390,q=184676419
+Result generation:0
+x:12,p=1935802,q=175133343
+Result generation:0
+x:13,p=3015528,q=166422108
+Result generation:0
+x:14,p=8490625,q=158560713
+Result generation:0
+x:15,p=15097656,q=151770844
+Result generation:0
+x:16,p=5332833,q=145222797
+Result generation:0
+x:17,p=47876369,q=139038387
+The size boundary is 17
+The number of big set is 6265
+The number of small set is 493734
+begin to process:6.790000
+To process the large set cost 6.656000 seconds!
+To process the small set cost 0.534000 seconds!
+finish to process:13.980000
+SizeAwareJoin algorithm generates 166942 results in 13.998000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 168239 results in 28.355000 seconds!
+           Processed     avoids 6831000 repeated candidate pairs 
+            verification removes 15891578 candidate pairs among 16059817 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  10      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:10,p=0,q=195660442
+Result generation:0
+x:11,p=261678,q=184676419
+Result generation:0
+x:12,p=1143883,q=175133343
+Result generation:0
+x:13,p=6031056,q=166422108
+Result generation:0
+x:14,p=3306875,q=158560713
+Result generation:0
+x:15,p=3414946,q=151770844
+Result generation:0
+x:16,p=9852183,q=145222797
+Result generation:0
+x:17,p=26345630,q=139038387
+The size boundary is 17
+The number of big set is 6265
+The number of small set is 493734
+begin to process:6.146000
+To process the large set cost 6.640000 seconds!
+To process the small set cost 0.352000 seconds!
+finish to process:13.138000
+SizeAwareJoin algorithm generates 86136 results in 13.145000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 86680 results in 24.490000 seconds!
+           Processed     avoids 5707531 repeated candidate pairs 
+            verification removes 11034315 candidate pairs among 11120995 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  12      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:12,p=0,q=175133343
+Result generation:0
+x:13,p=443460,q=166422108
+Result generation:0
+x:14,p=268125,q=158560713
+Result generation:0
+x:15,p=629069,q=151770844
+Result generation:0
+x:16,p=1898127,q=145222797
+Result generation:0
+x:17,p=5359973,q=139038387
+Result generation:0
+x:18,p=12871044,q=133507572
+The size boundary is 18
+The number of big set is 5734
+The number of small set is 494265
+begin to process:5.559000
+To process the large set cost 6.164000 seconds!
+To process the small set cost 0.320000 seconds!
+finish to process:12.043000
+SizeAwareJoin algorithm generates 46739 results in 12.047000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 46747 results in 22.103000 seconds!
+           Processed     avoids 4871339 repeated candidate pairs 
+            verification removes 8172859 candidate pairs among 8219606 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  14      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:14,p=0,q=158560713
+Result generation:0
+x:15,p=89867,q=151770844
+Result generation:0
+x:16,p=361548,q=145222797
+Result generation:0
+x:17,p=545082,q=139038387
+Result generation:0
+x:18,p=730272,q=133507572
+Result generation:0
+x:19,p=2200512,q=128303411
+Result generation:0
+x:20,p=10492104,q=123082822
+The size boundary is 20
+The number of big set is 4890
+The number of small set is 495109
+begin to process:5.765000
+To process the large set cost 5.629000 seconds!
+To process the small set cost 0.330000 seconds!
+finish to process:11.724000
+SizeAwareJoin algorithm generates 28161 results in 11.730000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 28161 results in 19.709000 seconds!
+           Processed     avoids 4201662 repeated candidate pairs 
+            verification removes 6224939 candidate pairs among 6253100 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  16      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:16,p=0,q=145222797
+Result generation:0
+x:17,p=272541,q=139038387
+Result generation:0
+x:18,p=182568,q=133507572
+Result generation:0
+x:19,p=916880,q=128303411
+Result generation:0
+x:20,p=3957548,q=123082822
+Result generation:0
+x:21,p=923790,q=119129355
+Result generation:0
+x:22,p=2317625,q=115090322
+Result generation:0
+x:23,p=4928788,q=111223931
+Result generation:0
+x:24,p=9329900,q=107718412
+The size boundary is 24
+The number of big set is 3714
+The number of small set is 496285
+begin to process:7.391000
+To process the large set cost 4.483000 seconds!
+To process the small set cost 0.353000 seconds!
+finish to process:12.227000
+SizeAwareJoin algorithm generates 17983 results in 12.239000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 17984 results in 18.255000 seconds!
+           Processed     avoids 3649630 repeated candidate pairs 
+            verification removes 4872282 candidate pairs among 4890266 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  20      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:20,p=0,q=123082822
+Result generation:0
+x:21,p=0,q=119129355
+Result generation:0
+x:22,p=1205165,q=115090322
+Result generation:0
+x:23,p=92996,q=111223931
+Result generation:0
+x:24,p=839691,q=107718412
+Result generation:0
+x:25,p=1309840,q=104252652
+Result generation:0
+x:26,p=14635452,q=101279293
+The size boundary is 26
+The number of big set is 3285
+The number of small set is 496714
+begin to process:6.843000
+To process the large set cost 4.099000 seconds!
+To process the small set cost 0.322000 seconds!
+finish to process:11.264000
+SizeAwareJoin algorithm generates 8290 results in 11.275000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 8290 results in 15.692000 seconds!
+           Processed     avoids 2835496 repeated candidate pairs 
+            verification removes 3150053 candidate pairs among 3158343 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  24      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:24,p=0,q=107718412
+Result generation:0
+x:25,p=0,q=104252652
+Result generation:0
+x:26,p=1219621,q=101279293
+Result generation:0
+x:27,p=188132,q=98118031
+Result generation:0
+x:28,p=9052608,q=95125618
+The size boundary is 28
+The number of big set is 2936
+The number of small set is 497063
+begin to process:5.931000
+To process the large set cost 3.691000 seconds!
+To process the small set cost 0.317000 seconds!
+finish to process:9.939000
+SizeAwareJoin algorithm generates 4235 results in 9.950000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 4235 results in 13.910000 seconds!
+           Processed     avoids 2254866 repeated candidate pairs 
+            verification removes 2173667 candidate pairs among 2177902 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  28      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:28,p=0,q=95125618
+Result generation:0
+x:29,p=0,q=92844616
+Result generation:0
+x:30,p=94673,q=89595046
+Result generation:0
+x:31,p=474070,q=87487449
+Result generation:0
+x:32,p=1710522,q=85067290
+Result generation:0
+x:33,p=380724,q=83255070
+Result generation:0
+x:34,p=572112,q=81360429
+Result generation:0
+x:35,p=8978222,q=79221293
+The size boundary is 35
+The number of big set is 2119
+The number of small set is 497880
+begin to process:5.994000
+To process the large set cost 3.805000 seconds!
+To process the small set cost 0.370000 seconds!
+finish to process:10.169000
+SizeAwareJoin algorithm generates 2334 results in 10.179000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 2334 results in 13.076000 seconds!
+           Processed     avoids 1820794 repeated candidate pairs 
+            verification removes 1566279 candidate pairs among 1568613 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  32      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:32,p=0,q=85067290
+Result generation:0
+x:33,p=0,q=83255070
+Result generation:0
+x:34,p=381408,q=81360429
+Result generation:0
+x:35,p=95513,q=79221293
+Result generation:0
+x:36,p=1626594,q=76923555
+Result generation:0
+x:37,p=1820599,q=75079413
+Result generation:0
+x:38,p=959920,q=73108460
+Result generation:0
+x:39,p=2212784,q=71181119
+Result generation:0
+x:40,p=3949407,q=69653101
+The size boundary is 40
+The number of big set is 1682
+The number of small set is 498317
+begin to process:6.142000
+To process the large set cost 2.455000 seconds!
+To process the small set cost 0.375000 seconds!
+finish to process:8.972000
+SizeAwareJoin algorithm generates 1375 results in 8.982000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 1375 results in 11.955000 seconds!
+           Processed     avoids 1483463 repeated candidate pairs 
+            verification removes 1149862 candidate pairs among 1151237 total
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  36      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:36,p=0,q=76923555
+Result generation:0
+x:37,p=0,q=75079413
+Result generation:0
+x:38,p=0,q=73108460
+Result generation:0
+x:39,p=3752112,q=71181119
+The size boundary is 39
+The number of big set is 1768
+The number of small set is 498231
+begin to process:4.101000
+To process the large set cost 2.498000 seconds!
+To process the small set cost 0.387000 seconds!
+finish to process:6.986000
+SizeAwareJoin algorithm generates 830 results in 6.993000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
+AllPairJoin algorithm generates 830 results in 11.361000 seconds!
+           Processed     avoids 1212010 repeated candidate pairs 
+            verification removes 862289 candidate pairs among 863119 total

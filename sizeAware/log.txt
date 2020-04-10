@@ -1,0 +1,77 @@
+/***************************************/
+/***************************************/
+
+DATA LOADING....!
+RelationS is loeded!!
+    36840 elements are there in the universe of relationS!
+    25000 sets are there in relationS!
+DATA LOADING is loaded in 0.187000 seconds!
+uSize: 36840 
+avgFre: 5.9 devFre: 34.63  biasDegree: 67.51   peakDegree: 8068.56 
+minLowFre: 1 
+maxLowFre: 7 
+avgLowFre: 1.677419 
+devLowFre: 1.210759 
+lFrePos:   32303 
+minMiddleFre: 7 
+maxMiddleFre: 153 
+avgMiddleFre: 24.849255 
+devMiddleFre: 25.883450 
+hFrePos:   36668 
+minHighFre: 153 
+maxHighFre: 4533 
+avgHighFre: 312.595376 
+devHighFre: 362.955607 
+The cost to compute statistics is 0.000000 seconds!
+Turn at 36677-th element in 36840 elements with frequency: 159 
+36840;5.9;34.63;-457855517534.49;8068.56;1.677419;1.210759;32303;7;153;24.849255;25.883450;36668;153;4533;312.595376;362.955607
+average bias turn length: 6
+average length of sets in relation S: 8.669200 
+standard deviation of set length in relation S: 24.999944 
+/***************************************/
+/***************************************/
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:   4      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    DIVIDE-SKIP   ############################
+divide-skip is ready to run........
+divide-skip algorithm generates 481184 results in 5.201000 seconds!
+
+
+####################    SCANCOUNT   ############################
+scanCount is ready to run........
+scan-count algorithm generates 481184 results in 0.453000 seconds!
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:4,p=8003,q=26672426
+Result generation:0
+x:5,p=18494,q=25229704
+Result generation:0
+x:6,p=125712,q=23968659
+Result generation:0
+x:7,p=68574,q=22908466
+Result generation:0
+x:8,p=309525,q=22100049
+Result generation:0
+x:9,p=5411479,q=21368418
+The size boundary is 9
+The number of big set is 4958
+The number of small set is 20042
+begin to process:0.500000
+To process the large set cost 0.360000 seconds!
+To process the small set cost 0.031000 seconds!
+finish to process:0.891000
+SizeAwareJoin algorithm generates 481184 results in 0.891000 seconds!
+
+
+AllPairJoin is ready to run........
+AllPairJoin algorithm begins with the inverted index built incrementally....
