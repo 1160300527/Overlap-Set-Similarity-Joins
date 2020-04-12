@@ -32,6 +32,8 @@ public:
 };
 void outputInverted(int **inverted);
 int getParamL(int **inverted,int **rel,int R,int t);
+
+
 long long  DivideSkip(int** rel, int threshold)
 {
     int **inverted,**inverted_short;

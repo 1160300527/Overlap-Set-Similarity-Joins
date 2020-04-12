@@ -47,7 +47,7 @@ void  loadData(char* sFile, SSTATISTICS * stat)
     FILE        *  inFile;
     int         *  tRel;
     int            set, item, maxEle;
-    size_t         start_time,end_time;
+    size_t         start_time,end_time,start_extra,end_extra;
     long long      totalLen;
 
     printf("DATA is LOADING....\n");
@@ -168,6 +168,9 @@ void  loadData(char* sFile, SSTATISTICS * stat)
     //sortMapByCount(eleMap, 1, eleMap[0].element);      //to sort eleMap according to count
     sortMapByCount(eleMap, relS[0][0]);                  //to sort eleMap according to count
     printf("items are sorted in ascending order of frequencies\n");
+
+    start_extra = clock();
+
     statOfUniverse(eleMap,stat);
     printf("The universe set are statisticed\n");
     mapUniverseToNewOreder(eleMap);                                //to map each element in the universe to a new order
@@ -192,44 +195,6 @@ void  loadData(char* sFile, SSTATISTICS * stat)
         sortSet(relS[i],1,relS[i][0]);
     }
 
-//    /**********************Sorted the set by the size of set***********************/
-//    int temp;
-//    int minSize,minSet;
-//    for(int i=1;i<=sortedSet[0];i++)
-//    {
-//        minSize=INT_MAX;
-//        minSet=-1;
-//        //printf("i:%d\n",i);
-//        for(int j=i;j<=sortedSet[0];j++)
-//        {
-//            if(relS[j][0]<minSize)
-//            {
-//                minSet=j;
-//                minSize=relS[j][0];
-//            }
-//        }
-//        if(minSize<relS[i][0])
-//        {
-//            temp=sortedSet[i];
-//            sortedSet[i]=sortedSet[minSet];
-//            sortedSet[minSet]=temp;
-//        }
-//    }
-//    setSize = (int*)malloc(sizeof(int)*(sortedSet[sortedSet[0]]+1));
-//    setSize[0]=sortedSet[sortedSet[0]];
-//    int currentSize=0;
-//    for(int i=1;i<sortedSet[0];i++)
-//    {
-//        if(sortedSet[i]>currentSize)
-//        {
-//            for(int j=currentSize+1;j<=sortedSet[i];j++)
-//            {
-//                setSize[j]=i;
-//            }
-//            currentSize=sortedSet[i];
-//        }
-//    }
-//    /**********************End to sort the set       ******************************/
     stat->avgBiasTurnLen = ceil( totalLen/((double) relS[0][0]));
     printf("average bias turn length: %d\n", stat->avgBiasTurnLen);
     fprintf(logFp, "average bias turn length: %d\n", stat->avgBiasTurnLen);
@@ -251,10 +216,14 @@ void  loadData(char* sFile, SSTATISTICS * stat)
 
     //sortRelLex(relS, eleMap, 1, relS[0][0]);
     /**************to relationS is mapped ***********************************************************************/
+    end_extra=clock();
     free(eleMap);
+    printf("Extra statistical work is completed in %f seconds!\n", (end_extra-start_extra)/((double)CLOCKS_PER_SEC));
+    fprintf(logFp,"Extra statistical work is completed in %f seconds!\n", (end_extra-start_extra)/((double)CLOCKS_PER_SEC));
+
     end_time = clock();
     printf("PREPROCESSION is completed for %d sets in %f seconds!\n",relS[0][0], (end_time-start_time)/((double)CLOCKS_PER_SEC));
-    (logFp, "PREPROCESSION is completed for %d sets in %f seconds!\n",relS[0][0], (end_time-start_time)/((double)CLOCKS_PER_SEC));
+    fprintf(logFp, "PREPROCESSION is completed for %d sets in %f seconds!\n",relS[0][0], (end_time-start_time)/((double)CLOCKS_PER_SEC));
     fprintf(logFp, "/***************************************/\n");
     fprintf(logFp, "/***************************************/\n\n");
     fflush(logFp);

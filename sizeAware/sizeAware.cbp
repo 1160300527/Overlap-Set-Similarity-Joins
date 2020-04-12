@@ -42,6 +42,8 @@
 		<Unit filename="filter.cpp" />
 		<Unit filename="filter.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="mergeSkip.cpp" />
+		<Unit filename="mergeSkip.h" />
 		<Unit filename="scanCount.cpp" />
 		<Unit filename="scanCount.h" />
 		<Unit filename="sizeAware.cpp" />

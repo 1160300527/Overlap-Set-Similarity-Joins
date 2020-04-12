@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 /*****************************************************************************/
 {
     int    thresh[13]  = {2,4,6,8,10,12,14,16,20,24,28,32,36};
-    char   logFile[50]="log.txt";
+    char   logFile[50]="logs\\log_book_25k.txt";
     //char   sFile[50]="test.txt";//"AOL_out.txt";//"com-orkut.ungraph.txt"; //"Netflix_out.txt";
     char   sFile[50];//="AOL_out.txt";//"com-orkut.ungraph.txt"; //"Netflix_out.txt";
     SSTATISTICS  stat;
@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
     }
     size_t  sortTimeStart =clock();
 #endif // L_debug
-    for(int i=1; i<13; i++)
+    for(int i=5; i<13; i++)
     {
         printf("\n\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
         printf("$$$$$$$$$$$$$$$$$THRESHOLD: %3d      $$$$$$$$$$$$$$$$$$$$$\n", thresh[i]);
@@ -64,10 +64,10 @@ int main(int argc, char *argv[])
         fprintf(logFp,"$$$$$$$$$$$$$$$$$THRESHOLD: %3d      $$$$$$$$$$$$$$$$$$$$$\n", thresh[i]);
         fprintf(logFp,"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 
-        DivideSkip(relS,thresh[i]);
-        ScanCountJoin(relS,thresh[i]);
         SizeAwareJoin(relS, thresh[i]);
         AllPairsJoin(relS, thresh[i]);
+        ScanCountJoin(relS,thresh[i]);
+        DivideSkip(relS,thresh[i]);
         MergeSkip(relS,thresh[i]);
         //newFilterAllPairsJoin(relS,10);
         //filterAndRefine(&stat,relS, thresh[i]);
