@@ -12,6 +12,7 @@
 #define param 0.0085
 
 extern FILE *logFp;
+extern FILE *logs2;
 
 
 using namespace std;
@@ -98,7 +99,7 @@ long long  DivideSkip(int** rel, int threshold)
     end = clock();
     printf("divide-skip algorithm generates %lld results in %3f seconds!\n", rValue, (end-start)/(double)CLOCKS_PER_SEC);
     fprintf(logFp, "divide-skip algorithm generates %lld results in %3f seconds!\n", rValue, (end-start)/(double)CLOCKS_PER_SEC);
-
+    fprintf(logs2,"%3f ",(end-start)/(double)CLOCKS_PER_SEC);
 }
 
 ShortSet* MergeSkip(int c,int **inverted,int R)

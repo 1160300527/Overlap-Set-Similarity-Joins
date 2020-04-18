@@ -6,6 +6,7 @@
 #include "mergeSkip.h"
 
 extern FILE*logFp;
+extern FILE *logs2;
 
 using namespace std;
 
@@ -49,5 +50,5 @@ long long MergeSkip(int** rel, int threshold)
     end = clock();
     printf("merge-skip algorithm generates %lld results in %3f seconds!\n", rValue, (end-start)/(double)CLOCKS_PER_SEC);
     fprintf(logFp, "merge-skip algorithm generates %lld results in %3f seconds!\n", rValue, (end-start)/(double)CLOCKS_PER_SEC);
-
+    fprintf(logs2,"%3f ",(end-start)/(double)CLOCKS_PER_SEC);
 }

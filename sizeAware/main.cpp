@@ -12,6 +12,7 @@
 #include  "mergeSkip.h"
 
 FILE *  logFp;
+FILE *  logs2;
 int  ** relS;
 int  *  sortedSet;
 int  *  setSize;
@@ -31,7 +32,8 @@ int main(int argc, char *argv[])
 /*****************************************************************************/
 {
     int    thresh[13]  = {2,4,6,8,10,12,14,16,20,24,28,32,36};
-    char   logFile[50]="logs\\log_book_25k.txt";
+    char   logFile[50]="logs\\log_Netflix_25k.txt";
+    char   logFile2[50]="log\\log_Netflix_25k.txt";
     //char   sFile[50]="test.txt";//"AOL_out.txt";//"com-orkut.ungraph.txt"; //"Netflix_out.txt";
     char   sFile[50];//="AOL_out.txt";//"com-orkut.ungraph.txt"; //"Netflix_out.txt";
     SSTATISTICS  stat;
@@ -40,6 +42,7 @@ int main(int argc, char *argv[])
     strcpy(sFile, argv[1]);
     //to prepare log file where all information during running will be recorded
     logFp = fopen(logFile,"w+");
+    logs2 = fopen(logFile2,"w+");
     if(!logFp)
     {
         printf("Error: can not open the log file!\n");
@@ -55,7 +58,7 @@ int main(int argc, char *argv[])
     }
     size_t  sortTimeStart =clock();
 #endif // L_debug
-    for(int i=5; i<13; i++)
+    for(int i=1; i<13; i++)
     {
         printf("\n\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
         printf("$$$$$$$$$$$$$$$$$THRESHOLD: %3d      $$$$$$$$$$$$$$$$$$$$$\n", thresh[i]);
@@ -68,11 +71,13 @@ int main(int argc, char *argv[])
         AllPairsJoin(relS, thresh[i]);
         ScanCountJoin(relS,thresh[i]);
         DivideSkip(relS,thresh[i]);
-        MergeSkip(relS,thresh[i]);
+        //MergeSkip(relS,thresh[i]);
+        fprintf(logs2,"\n");
         //newFilterAllPairsJoin(relS,10);
         //filterAndRefine(&stat,relS, thresh[i]);
     }
     fclose(logFp);
+    fclose(logs2);
     freeRelation(relS);
     free(stat.histgram);
     return 1;

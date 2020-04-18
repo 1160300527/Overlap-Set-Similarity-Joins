@@ -12,6 +12,7 @@
 //#endif // L_debug
 
 extern FILE * logFp;
+extern FILE *  logs2;
 using namespace std;
 
 int *relLarge;
@@ -124,6 +125,7 @@ long long  SizeAwareJoin(int ** rel, int threshold)
     end = clock();
     printf("SizeAwareJoin algorithm generates %lld results in %3f seconds!\n", rValue, (end-start)/(double)CLOCKS_PER_SEC);
     fprintf(logFp, "SizeAwareJoin algorithm generates %lld results in %3f seconds!\n", rValue, (end-start)/(double)CLOCKS_PER_SEC);
+    fprintf(logs2,"%3f ",(end-start)/(double)CLOCKS_PER_SEC);
     return  rValue;
 }
 

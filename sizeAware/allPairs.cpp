@@ -14,6 +14,7 @@
 //extern long long memorySize;
 long long        maxMem;
 extern FILE * logFp;
+extern FILE * logs2;
 
 
 
@@ -96,6 +97,7 @@ long long  AllPairsJoin(int ** rel, int threshold)
     fprintf(logFp, "AllPairJoin algorithm generates %lld results in %3f seconds!\n", rValue, (end-start)/(double)CLOCKS_PER_SEC);
     fprintf(logFp, "           Processed     avoids %lld repeated candidate pairs \n", pFiltered);
     fprintf(logFp,"            verification removes %lld candidate pairs among %lld total\n", vFiltered, vFiltered+rValue);
+    fprintf(logs2,"%3f ",(end-start)/(double)CLOCKS_PER_SEC);
     #ifdef L_debug
     fflush(allPairslog);
     #endif // L_debug

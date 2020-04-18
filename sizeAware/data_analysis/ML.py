@@ -26,7 +26,7 @@ def loadSizeAwareData(argv,sheet_name):
     for i in range(1, row):
         rows = np.vstack((rows, sheet.row_values(i)))
     a = matrix(np.array(rows).astype(float))
-    return a[:,:col-5],a[:,col-4]
+    return a[:,col-4]
 
 def loadAllPairsData(argv,sheet_name):
     filePath = argv[1]
@@ -38,7 +38,7 @@ def loadAllPairsData(argv,sheet_name):
     for i in range(1, row):
         rows = np.vstack((rows, sheet.row_values(i)))
     a = matrix(np.array(rows).astype(float))
-    return a[:,:col-5],a[:,col-3]
+    return a[:,col-3]
 
 def loadMulData(argv,sheet_name):
     filePath = argv[1]
@@ -340,8 +340,8 @@ def loadDataReal(argv,sheet_name):
 
 
 if __name__== '__main__':
-    (X_train_size,Y_train_size)=loadSizeAwareData(sys.argv,"train")
-    (X_train_all,Y_train_all)=loadAllPairsData(sys.argv,"train")
+    Y_train_size=loadSizeAwareData(sys.argv,"train")
+    Y_train_all=loadAllPairsData(sys.argv,"train")
     (X_train_mul,Y_train_mul)=loadMulData(sys.argv,"train")
     (X_test_size,Y_test_size)=loadSizeAwareData(sys.argv,"test")
     (X_test_all,Y_test_all)=loadAllPairsData(sys.argv,"test")

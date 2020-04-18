@@ -10,6 +10,7 @@ using namespace std;
 //#define stuDEBUG
 //#endif // stuDEBUG
 extern FILE *  logFp;
+extern FILE *  logs2;
 extern int  ** relS;
 extern int  *  sortedSet;
 extern int  *  setSize;
@@ -418,7 +419,7 @@ void   statOfUniverse(ELEMENTMAP * eleMap, SSTATISTICS * stat)
     }
     fprintf(logFp, "Turn at %d-th element in %d elements with frequency: %d \n", stat->biasTurnPos, stat->uSize, eleMap[stat->biasTurnPos].count);
     printf("Turn at %d-th element in %d elements with frequency: %d \n", stat->biasTurnPos, stat->uSize, eleMap[stat->biasTurnPos].count);
-    fprintf(logFp,"%d;%.1f;%.2f;%.2f;%.2f;%f;%f;%d;%d;%d;%f;%f;%d;%d;%d;%f;%f\n",stat->uSize,avg,deviation,stat->biasDegree, stat->peakDegree,stat->avgLowFre,stat->devLowFre,stat->lFrePos,stat->minMiddleFre,stat->maxMiddleFre,stat->avgMiddleFre,stat->devMiddleFre,stat->hFrePos,stat->minHighFre,stat->maxHighFre,stat->avgHighFre,stat->devHighFre);
+    fprintf(logs2,"%d %.1f %.2f empty %.2f %f %f %d %d %d %f %f %d %d %d %f %f\n",stat->uSize,avg,deviation, stat->peakDegree,stat->avgLowFre,stat->devLowFre,stat->lFrePos,stat->minMiddleFre,stat->maxMiddleFre,stat->avgMiddleFre,stat->devMiddleFre,stat->hFrePos,stat->minHighFre,stat->maxHighFre,stat->avgHighFre,stat->devHighFre);
 }
 
 void   statOfRelationS(int ** relS, SSTATISTICS * stat)
