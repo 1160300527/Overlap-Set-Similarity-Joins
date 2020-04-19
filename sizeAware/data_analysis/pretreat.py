@@ -16,8 +16,8 @@ def getData(filePath):
     row = sheet.nrows
     for i in range(2, row):
         rows = np.vstack((rows, sheet.row_values(i)))
-    a = matrix(np.array(rows).astype(float))
-    a = a[:, :sheet.ncols]
+    a = rows[:, :sheet.ncols-2]
+    #a = matrix(np.array(rows).astype(float))
     return a
 
 

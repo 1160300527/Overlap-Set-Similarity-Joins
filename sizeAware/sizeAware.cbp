@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="E:\LisData\Bookcrossing\pretreatmentBook\book_300k.txt" />
+				<Option parameters="E:\LisData\Bookcrossing\pretreatmentBook\book_50k.txt" />
 				<Compiler>
 					<Add option="-std=c++11" />
 					<Add option="-g" />

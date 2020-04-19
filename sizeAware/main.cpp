@@ -32,8 +32,8 @@ int main(int argc, char *argv[])
 /*****************************************************************************/
 {
     int    thresh[13]  = {2,4,6,8,10,12,14,16,20,24,28,32,36};
-    char   logFile[50]="logs\\log_Netflix_25k.txt";
-    char   logFile2[50]="log\\log_Netflix_25k.txt";
+    char   logFile[50]="logs\\log.txt";
+    char   logFile2[50]="log\\log.txt";
     //char   sFile[50]="test.txt";//"AOL_out.txt";//"com-orkut.ungraph.txt"; //"Netflix_out.txt";
     char   sFile[50];//="AOL_out.txt";//"com-orkut.ungraph.txt"; //"Netflix_out.txt";
     SSTATISTICS  stat;
@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
         fprintf(logFp,"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 
         SizeAwareJoin(relS, thresh[i]);
-        AllPairsJoin(relS, thresh[i]);
+        //AllPairsJoin(relS, thresh[i]);
         ScanCountJoin(relS,thresh[i]);
         DivideSkip(relS,thresh[i]);
         //MergeSkip(relS,thresh[i]);

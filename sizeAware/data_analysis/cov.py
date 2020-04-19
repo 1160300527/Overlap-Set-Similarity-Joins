@@ -6,7 +6,7 @@ import openpyxl
 from numpy import *
 from xlutils.copy import copy
 
-
+all_type = 4
 ###################################################################################
 #####Function:分析各属性与结果的相关性系数                                       #####
 #####Input   :命令行输入的参数,加载数据的路径                                    #####
@@ -25,7 +25,7 @@ def getData(argv):
 
 
 def content(data):
-    data = data[:,:data.shape[1]-4]
+    data = data[:,:data.shape[1]-all_type]
     row = data.shape[0]
     col = data.shape[1]
     avg = data.sum(axis=0)/row

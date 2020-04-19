@@ -1,0 +1,157 @@
+/***************************************/
+/***************************************/
+
+DATA LOADING....!
+RelationS is loeded!!
+    48302 elements are there in the universe of relationS!
+    50000 sets are there in relationS!
+DATA LOADING is loaded in 0.255000 seconds!
+uSize: 48302 
+avgFre: 7.0 devFre: 70.03  biasDegree: 133.90   peakDegree: 23478.96 
+minLowFre: 1 
+maxLowFre: 10 
+avgLowFre: 1.946448 
+devLowFre: 1.728933 
+lFrePos:   43678 
+minMiddleFre: 10 
+maxMiddleFre: 256 
+avgMiddleFre: 38.016749 
+devMiddleFre: 41.921271 
+hFrePos:   48156 
+minHighFre: 256 
+maxHighFre: 12804 
+avgHighFre: 576.727891 
+devHighFre: 1093.314592 
+The cost to compute statistics is 0.000000 seconds!
+Turn at 48260-th element in 48302 elements with frequency: 497 
+average bias turn length: 4
+average length of sets in relation S: 6.800660 
+standard deviation of set length in relation S: 18.828984 
+Extra statistical work is completed in 0.033000 seconds!
+PREPROCESSION is completed for 50000 sets in 0.297000 seconds!
+/***************************************/
+/***************************************/
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  20      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:20,p=0,q=43028153
+Result generation:0
+x:21,p=0,q=41837723
+Result generation:0
+x:22,p=96084,q=40627227
+Result generation:0
+x:23,p=487455,q=39455217
+Result generation:0
+x:24,p=394584,q=38445396
+Result generation:0
+x:25,p=432874,q=37228874
+Result generation:0
+x:26,p=1212768,q=36350877
+Result generation:0
+x:27,p=1498816,q=35343237
+Result generation:0
+x:28,p=1307960,q=34363658
+Result generation:0
+x:29,p=3395112,q=33621372
+The size boundary is 29
+The number of big set is 2378
+The number of small set is 47622
+begin to process:1.158000
+To process the large set cost 0.524000 seconds!
+To process the small set cost 0.103000 seconds!
+finish to process:1.785000
+SizeAwareJoin algorithm generates 8219 results in 1.785000 seconds!
+
+
+####################    SCANCOUNT   ############################
+scanCount is ready to run........
+scan-count algorithm generates 8219 results in 2.070000 seconds!
+
+
+####################    DIVIDE-SKIP   ############################
+divide-skip is ready to run........
+divide-skip algorithm generates 8219 results in 2.189000 seconds!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  24      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:24,p=0,q=38445396
+Result generation:0
+x:25,p=0,q=37228874
+Result generation:0
+x:26,p=101064,q=36350877
+Result generation:0
+x:27,p=647216,q=35343237
+Result generation:0
+x:28,p=206520,q=34363658
+Result generation:0
+x:29,p=242508,q=33621372
+The size boundary is 29
+The number of big set is 2378
+The number of small set is 47622
+begin to process:0.746000
+To process the large set cost 0.556000 seconds!
+To process the small set cost 0.075000 seconds!
+finish to process:1.377000
+SizeAwareJoin algorithm generates 4218 results in 1.377000 seconds!
+
+
+####################    SCANCOUNT   ############################
+scanCount is ready to run........
+scan-count algorithm generates 4218 results in 2.072000 seconds!
+
+
+####################    DIVIDE-SKIP   ############################
+divide-skip is ready to run........
+divide-skip algorithm generates 4218 results in 1.690000 seconds!
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$THRESHOLD:  28      $$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+####################    SIZEAWARE   ############################
+sizeAware is ready to run........
+Result generation:0
+Result generation:0
+x:28,p=0,q=34363658
+Result generation:0
+x:29,p=0,q=33621372
+Result generation:0
+x:30,p=630000,q=32453006
+Result generation:0
+x:31,p=105567,q=31762338
+The size boundary is 31
+The number of big set is 2182
+The number of small set is 47818
+begin to process:0.629000
+To process the large set cost 0.504000 seconds!
+To process the small set cost 0.069000 seconds!
+finish to process:1.202000
+SizeAwareJoin algorithm generates 2331 results in 1.202000 seconds!
+
+
+####################    SCANCOUNT   ############################
+scanCount is ready to run........
+scan-count algorithm generates 2331 results in 2.145000 seconds!
+
+
+####################    DIVIDE-SKIP   ############################
+divide-skip is ready to run........
