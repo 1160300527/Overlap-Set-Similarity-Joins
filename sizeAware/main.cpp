@@ -1,7 +1,9 @@
 #include  <stdio.h>
 #include  <stdlib.h>
 #include  <string.h>
+#include  <iostream>
 #include  <time.h>
+#include  <vector>
 #include  "filter.h"
 #include  "dataload.h"
 #include  "allPairs.h"
@@ -10,9 +12,10 @@
 #include  "scanCount.h"
 #include  "divideSkip.h"
 #include  "mergeSkip.h"
-
+#include  "transferPy.h"
 FILE *  logFp;
 FILE *  logs2;
+vector<double>args;
 int  ** relS;
 int  *  sortedSet;
 int  *  setSize;
@@ -60,6 +63,10 @@ int main(int argc, char *argv[])
 #endif // L_debug
     for(int i=1; i<13; i++)
     {
+        vector<double> t_args;
+        t_args.assign(args.begin(),args.end());
+        t_args.push_back(thresh[i]);
+        cout<<transferPython(t_args)<<endl;
         printf("\n\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
         printf("$$$$$$$$$$$$$$$$$THRESHOLD: %3d      $$$$$$$$$$$$$$$$$$$$$\n", thresh[i]);
         printf("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
@@ -80,5 +87,6 @@ int main(int argc, char *argv[])
     fclose(logs2);
     freeRelation(relS);
     free(stat.histgram);
+
     return 1;
 }

@@ -11,48 +11,16 @@ from sklearn.linear_model import RidgeCV
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
+from sklearn.feature_selection import SelectKBest,chi2
+from sklearn import ensemble 
 import pydotplus
 import os
+import joblib
+import loadModule
 
 all_type = 4
 types = 4
 os.environ['PATH']+=os.pathsep+'D:/graphviz/bin'
-
-def loadSizeAwareData(argv,sheet_name):
-    filePath = argv[1]
-    file = xlrd.open_workbook(filePath)
-    sheet = file.sheet_by_name(sheet_name)
-    rows = sheet.row_values(0)
-    row = sheet.nrows
-    col = sheet.ncols
-    for i in range(1, row):
-        rows = np.vstack((rows, sheet.row_values(i)))
-    a = matrix(np.array(rows).astype(float))
-    return a[:,col-4]
-
-def loadAllPairsData(argv,sheet_name):
-    filePath = argv[1]
-    file = xlrd.open_workbook(filePath)
-    sheet = file.sheet_by_name(sheet_name)
-    rows = sheet.row_values(0)
-    row = sheet.nrows
-    col = sheet.ncols
-    for i in range(1, row):
-        rows = np.vstack((rows, sheet.row_values(i)))
-    a = matrix(np.array(rows).astype(float))
-    return a[:,col-3]
-
-def loadMulData(argv,sheet_name):
-    filePath = argv[1]
-    file = xlrd.open_workbook(filePath)
-    sheet = file.sheet_by_name(sheet_name)
-    rows = sheet.row_values(0)
-    row = sheet.nrows
-    col = sheet.ncols
-    for i in range(1, row):
-        rows = np.vstack((rows, sheet.row_values(i)))
-    a = matrix(np.array(rows).astype(float))
-    return a[:,:col-5],a[:,col-2]
 
 def getAllCost(Y,Cost):
     all_size = 0
@@ -76,7 +44,7 @@ def svm_svc(X,Y,X_test,Y_test,weight,Cost):
     Y_pre=svc.predict(X_test)
     cost = getCost(Y_pre,Cost)
     print("########################################################svm_svc method######################################################")
-    getAllCost(Y_test,cost_test)
+    getAllCost(Y_test,Cost)
     print("accuracy:"+str("%.2f" % svc.score(X_test,Y_test)))  # 计算accuracy并输出
     print("cost:"+str("%2f"%cost))
     print("############################################################################################################################")
@@ -91,7 +59,7 @@ def nonliner_svm_svc(X,Y,X_test,Y_test,weight,Cost):
     Y_pre=svc.predict(X_test)
     cost = getCost(Y_pre,Cost)
     print("########################################################non liner svm_svc method######################################################")
-    getAllCost(Y_test,cost_test)
+    getAllCost(Y_test,Cost)
     print("accuracy:"+str("%.2f" % svc.score(X_test,Y_test)))  # 计算accuracy并输出
     print("cost:"+str("%2f"%cost))
     print("#####################################################################################################################################")
@@ -115,12 +83,12 @@ def getY(Cost):
     for i in range(Cost.shape[0]):
         min = sys.maxsize
         index = 0
-        for j in range(1,Cost.shape[1]):
+        for j in range(0,Cost.shape[1]):
             if(Cost[i,j]<min):
                 min=Cost[i,j]
                 index = j+1
-        if(Cost[i,index-1]>=Cost[i,0]*1.2 or Cost[i,index-1]-Cost[i,0]>=1):
-            index=1
+        # if(Cost[i,index-1]>=Cost[i,0]*1.2 or Cost[i,index-1]-Cost[i,0]>=1):
+        #     index=1
         Y.append(index)
     return np.matrix(Y).T
 
@@ -135,7 +103,7 @@ def logistic(X,Y,X_test,Y_test,weight,Cost):
     Y_pre=logist.predict(X_test)
     cost = getCost(Y_pre,Cost)
     print("######################################################logistic regression###################################################")
-    getAllCost(Y_test,cost_test)
+    getAllCost(Y_test,Cost)
     print("accuracy:"+str("%.2f" % logist.score(X_test,Y_test)))  # 计算accuracy并输出
     print("cost:"+str("%2f"%cost))
     print("############################################################################################################################")
@@ -229,11 +197,13 @@ def nonliner_fitting(X_train_size,Y_train_size,X_train_all,Y_train_all,X_test_si
     
 
 def tree(X,Y,X_test,Y_test,weight,Cost):
-    decision_tree=DecisionTreeClassifier()
+    decision_tree=DecisionTreeClassifier(max_depth=8)
+    decision_tree = ensemble.AdaBoostClassifier(decision_tree,n_estimators=50,random_state=0)
     decision_tree.fit(X,Y)
     accuracy=decision_tree.score(X_test,Y_test)
     Y_pre = decision_tree.predict(X_test)
     cost = getCost(Y_pre,Cost)
+    joblib.dump(decision_tree,'decision_tree.m')
     # R = recall(Y_pre,Y_test)
     # P = recall(Y_pre,Y_test)
     # F1 = F1score(R,P)
@@ -243,12 +213,12 @@ def tree(X,Y,X_test,Y_test,weight,Cost):
     print("accuracy:"+str("%.2f" % accuracy))  # 计算accuracy并输出
     print("cost:"+str("%2f"%cost))
     print("####################################################################################################")
-    feature_name=['size','avgFre','devFre','bias','peak','avgLowFre','devLowFre','lFrePos','minMiddleFre','maxMiddleFre','avgMiddleFre','devMiddleFre','hFrePos','minHighFre','maxHighFre','avgHighFre','devHighFre','setSize','avgLength','devLength','C']
-    dot_data = export_graphviz(decision_tree, out_file=None,
-                        filled=True,rounded=True,feature_names=feature_name,
-                        impurity=False)
-    graph = pydotplus.graph_from_dot_data(dot_data)
-    graph.write_pdf("iris.pdf")
+    # feature_name=['size','avgFre','devFre','bias','peak','avgLowFre','devLowFre','lFrePos','minMiddleFre','maxMiddleFre','avgMiddleFre','devMiddleFre','hFrePos','minHighFre','maxHighFre','avgHighFre','devHighFre','setSize','avgLength','devLength','C']
+    # dot_data = export_graphviz(decision_tree, out_file=None,
+    #                     filled=True,rounded=True,
+    #                     impurity=False)
+    # graph = pydotplus.graph_from_dot_data(dot_data)
+    # graph.write_pdf("iris.pdf")
 
 
 
@@ -258,11 +228,23 @@ def getData(argv,sheet_name):
     sheet = file.sheet_by_name(sheet_name)
     rows = sheet.row_values(0)
     row = sheet.nrows
-    for i in range(1, row):
+    for i in range(1,row):
         rows = np.vstack((rows, sheet.row_values(i)))
     a = matrix(np.array(rows).astype(float))
     a = a[:,:sheet.ncols]
     return a
+
+def feature(X,Y):
+    kBest = SelectKBest(score_func=chi2,k=18)
+    kBest.fit_transform(X,Y)
+    print(kBest.get_support())
+    select = kBest.get_support(indices=True)
+    return select
+
+def hello():
+    print("hello")
+    return 
+
 
 if __name__== '__main__':
     if(len(sys.argv)>2):
@@ -295,15 +277,22 @@ if __name__== '__main__':
 
     Y_test = getY(cost_test)
 
+    select = feature(X_train,Y_train)
+
+    X_train = X_train[:,select]
+
+    X_test = X_test[:,select]
+
     weight = getWeight(cost_train)
-    svm_svc(X_train,Y_train,X_test,Y_test,weight,cost_test)
-    print("\n")
-    nonliner_svm_svc(X_train,Y_train,X_test,Y_test,weight,cost_test)
-    print("\n")
-    logistic(X_train,Y_train,X_test,Y_test,weight,cost_test)
-    print("\n")
+    # svm_svc(X_train,Y_train,X_test,Y_test,weight,cost_test)
+    # print("\n")
+    # nonliner_svm_svc(X_train,Y_train,X_test,Y_test,weight,cost_test)
+    # print("\n")
+    # logistic(X_train,Y_train,X_test,Y_test,weight,cost_test)
+    # print("\n")
     #nonliner_logistic(X_train,Y_train,X_test,Y_test,weight)
     #nonliner_logistic(X_train_real,Y_train_real,X_test_real,Y_test_real,weight)
     #fitting(X_train_size,Y_train_size,X_train_all,Y_train_all,X_test_size,X_test_all,Y_test)
     #nonliner_fitting(X_train_size,Y_train_size,X_train_all,Y_train_all,X_test_size,X_test_all,Y_test)
     tree(X_train,Y_train,X_test,Y_test,weight,cost_test)
+    print(loadModule.predict(X_test));

@@ -183,12 +183,13 @@
 
 1581920334 f:\overlap-set-similarity-joins\sizeaware\dataload.h
 
-1587105586 source:f:\overlap-set-similarity-joins\sizeaware\dataload.cpp
+1588249482 source:f:\overlap-set-similarity-joins\sizeaware\dataload.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<math.h>
 	<time.h>
+	"transferPy.h"
 	"dataload.h"
 
 1587188796 source:f:\overlap-set-similarity-joins\sizeaware\divideskip.cpp
@@ -216,11 +217,13 @@
 
 1554516206 f:\overlap-set-similarity-joins\sizeaware\filter.h
 
-1587296191 source:f:\overlap-set-similarity-joins\sizeaware\main.cpp
+1588249696 source:f:\overlap-set-similarity-joins\sizeaware\main.cpp
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	<iostream>
 	<time.h>
+	<vector>
 	"filter.h"
 	"dataload.h"
 	"allPairs.h"
@@ -229,6 +232,7 @@
 	"scanCount.h"
 	"divideSkip.h"
 	"mergeSkip.h"
+	"transferPy.h"
 
 1584629075 f:\overlap-set-similarity-joins\sizeaware\sizeaware.h
 
@@ -277,4 +281,462 @@
 	"mergeSkip.h"
 
 1586529463 f:\overlap-set-similarity-joins\sizeaware\mergeskip.h
+
+1588256510 source:f:\overlap-set-similarity-joins\sizeaware\transferpy.cpp
+	<iostream>
+	"Python.h"
+	"transferPy.h"
+
+1587973473 f:\overlap-set-similarity-joins\sizeaware\python.h
+	"patchlevel.h"
+	"pyconfig.h"
+	"pymacconfig.h"
+	<limits.h>
+	<stdio.h>
+	<string.h>
+	<errno.h>
+	<stdlib.h>
+	<unistd.h>
+	<crypt.h>
+	<stddef.h>
+	<assert.h>
+	"pyport.h"
+	"pymacro.h"
+	"pyatomic.h"
+	"pymath.h"
+	"pytime.h"
+	"pymem.h"
+	"object.h"
+	"objimpl.h"
+	"typeslots.h"
+	"pyhash.h"
+	"pydebug.h"
+	"bytearrayobject.h"
+	"bytesobject.h"
+	"unicodeobject.h"
+	"longobject.h"
+	"longintrepr.h"
+	"boolobject.h"
+	"floatobject.h"
+	"complexobject.h"
+	"rangeobject.h"
+	"memoryobject.h"
+	"tupleobject.h"
+	"listobject.h"
+	"dictobject.h"
+	"odictobject.h"
+	"enumobject.h"
+	"setobject.h"
+	"methodobject.h"
+	"moduleobject.h"
+	"funcobject.h"
+	"classobject.h"
+	"fileobject.h"
+	"pycapsule.h"
+	"traceback.h"
+	"sliceobject.h"
+	"cellobject.h"
+	"iterobject.h"
+	"genobject.h"
+	"descrobject.h"
+	"warnings.h"
+	"weakrefobject.h"
+	"structseq.h"
+	"namespaceobject.h"
+	"codecs.h"
+	"pyerrors.h"
+	"pystate.h"
+	"context.h"
+	"pyarena.h"
+	"modsupport.h"
+	"compile.h"
+	"pythonrun.h"
+	"pylifecycle.h"
+	"ceval.h"
+	"sysmodule.h"
+	"osmodule.h"
+	"intrcheck.h"
+	"import.h"
+	"abstract.h"
+	"bltinmodule.h"
+	"eval.h"
+	"pyctype.h"
+	"pystrtod.h"
+	"pystrcmp.h"
+	"dtoa.h"
+	"fileutils.h"
+	"pyfpe.h"
+
+1587973264 f:\overlap-set-similarity-joins\sizeaware\transferpy.h
+	<vector>
+
+1571065454 c:\users\mr xs\appdata\local\programs\python\python37\include\patchlevel.h
+
+1571065454 c:\users\mr xs\appdata\local\programs\python\python37\include\pyconfig.h
+	<io.h>
+	<float.h>
+	<basetsd.h>
+	<stdio.h>
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pymacconfig.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pyport.h
+	"pyconfig.h"
+	<inttypes.h>
+	<stdlib.h>
+	<ieeefp.h>
+	<math.h>
+	<sys/time.h>
+	<time.h>
+	<sys/time.h>
+	<time.h>
+	<sys/select.h>
+	<sys/stat.h>
+	<stat.h>
+	<sys/types.h>
+	<sys/termio.h>
+	<ctype.h>
+	<wctype.h>
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pymacro.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pyatomic.h
+	"dynamic_annotations.h"
+	"pyconfig.h"
+	<stdatomic.h>
+	<intrin.h>
+	<immintrin.h>
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\dynamic_annotations.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pymath.h
+	"pyconfig.h"
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pytime.h
+	"pyconfig.h"
+	"object.h"
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\object.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pymem.h
+	"pyport.h"
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\objimpl.h
+	"pymem.h"
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\typeslots.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pyhash.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pydebug.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\bytearrayobject.h
+	<stdarg.h>
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\bytesobject.h
+	<stdarg.h>
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\unicodeobject.h
+	<stdarg.h>
+	<ctype.h>
+	<wchar.h>
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\longobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\longintrepr.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\boolobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\floatobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\complexobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\rangeobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\memoryobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\tupleobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\listobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\dictobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\odictobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\enumobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\setobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\methodobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\moduleobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\funcobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\classobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\fileobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pycapsule.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\traceback.h
+	"pystate.h"
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pystate.h
+	"pythread.h"
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pythread.h
+	<pthread.h>
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\sliceobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\cellobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\iterobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\genobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\descrobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\warnings.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\weakrefobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\structseq.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\namespaceobject.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\codecs.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pyerrors.h
+	<stdarg.h>
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\context.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pyarena.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\modsupport.h
+	<stdarg.h>
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\compile.h
+	"code.h"
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\code.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pythonrun.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pylifecycle.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\ceval.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\sysmodule.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\osmodule.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\intrcheck.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\import.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\abstract.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\bltinmodule.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\eval.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pyctype.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pystrtod.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pystrcmp.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\dtoa.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\fileutils.h
+
+1571065452 c:\users\mr xs\appdata\local\programs\python\python37\include\pyfpe.h
+
+1571065454 f:\overlap-set-similarity-joins\sizeaware\include\patchlevel.h
+
+1571065454 f:\overlap-set-similarity-joins\sizeaware\include\pyconfig.h
+	<io.h>
+	<float.h>
+	<basetsd.h>
+	<stdio.h>
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pymacconfig.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pyport.h
+	"pyconfig.h"
+	<inttypes.h>
+	<stdlib.h>
+	<ieeefp.h>
+	<math.h>
+	<sys/time.h>
+	<time.h>
+	<sys/time.h>
+	<time.h>
+	<sys/select.h>
+	<sys/stat.h>
+	<stat.h>
+	<sys/types.h>
+	<sys/termio.h>
+	<ctype.h>
+	<wctype.h>
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pymacro.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pyatomic.h
+	"dynamic_annotations.h"
+	"pyconfig.h"
+	<stdatomic.h>
+	<intrin.h>
+	<immintrin.h>
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\dynamic_annotations.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pymath.h
+	"pyconfig.h"
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pytime.h
+	"pyconfig.h"
+	"object.h"
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\object.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pymem.h
+	"pyport.h"
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\objimpl.h
+	"pymem.h"
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\typeslots.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pyhash.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pydebug.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\bytearrayobject.h
+	<stdarg.h>
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\bytesobject.h
+	<stdarg.h>
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\unicodeobject.h
+	<stdarg.h>
+	<ctype.h>
+	<wchar.h>
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\longobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\longintrepr.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\boolobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\floatobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\complexobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\rangeobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\memoryobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\tupleobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\listobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\dictobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\odictobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\enumobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\setobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\methodobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\moduleobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\funcobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\classobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\fileobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pycapsule.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\traceback.h
+	"pystate.h"
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pystate.h
+	"pythread.h"
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pythread.h
+	<pthread.h>
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\sliceobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\cellobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\iterobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\genobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\descrobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\warnings.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\weakrefobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\structseq.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\namespaceobject.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\codecs.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pyerrors.h
+	<stdarg.h>
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\context.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pyarena.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\modsupport.h
+	<stdarg.h>
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\compile.h
+	"code.h"
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\code.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pythonrun.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pylifecycle.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\ceval.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\sysmodule.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\osmodule.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\intrcheck.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\import.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\abstract.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\bltinmodule.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\eval.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pyctype.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pystrtod.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pystrcmp.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\dtoa.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\fileutils.h
+
+1571065452 f:\overlap-set-similarity-joins\sizeaware\include\pyfpe.h
 

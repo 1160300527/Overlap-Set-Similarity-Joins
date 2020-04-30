@@ -3,7 +3,10 @@
 #include  <string.h>
 #include  <math.h>
 #include  <time.h>
+#include  "transferPy.h"
 #include  "dataload.h"
+
+#define NUM_ARGS 18
 
 using namespace std;
 //#ifndef stuDEBUG
@@ -14,6 +17,7 @@ extern FILE *  logs2;
 extern int  ** relS;
 extern int  *  sortedSet;
 extern int  *  setSize;
+extern vector<double> args;
 
 #ifdef  DEBUG
 extern int  ** result1;
@@ -199,6 +203,7 @@ void  loadData(char* sFile, SSTATISTICS * stat)
     stat->avgBiasTurnLen = ceil( totalLen/((double) relS[0][0]));
     printf("average bias turn length: %d\n", stat->avgBiasTurnLen);
     fprintf(logFp, "average bias turn length: %d\n", stat->avgBiasTurnLen);
+    args.push_back(relS[0][0]);
     statOfRelationS(relS,stat);
 
     /*
@@ -245,7 +250,7 @@ void   statOfUniverse(ELEMENTMAP * eleMap, SSTATISTICS * stat)
     tStart = clock();
     stat->uSize = eleMap[0].element;
     fprintf(logFp, "uSize: %d \n", stat->uSize);
-
+    args.push_back(stat->uSize);
     /**the average frequency is computed first**/
     for(i=1; i<=eleMap[0].element; i++)
     {
@@ -255,6 +260,7 @@ void   statOfUniverse(ELEMENTMAP * eleMap, SSTATISTICS * stat)
     stat->avgFre = avg;                 //average of frequencies is computed here
     fprintf(logFp, "avgFre: %.1f ", avg);
     printf("  avgFre: %.1f ",avg);
+    args.push_back(avg);
 
     /**the standard deviation of  frequencies is computed then**/
     stat->biasDegree=0;
@@ -280,7 +286,13 @@ void   statOfUniverse(ELEMENTMAP * eleMap, SSTATISTICS * stat)
     stat->peakDegree /= pow(deviation,4);
     fprintf(logFp, "devFre: %.2f  biasDegree: %.2f   peakDegree: %.2f \n", deviation, stat->biasDegree, stat->peakDegree);
     printf("devFre: %.2f  biasDegree: %.2f   peakDegree: %.2f \n", deviation, stat->biasDegree, stat->peakDegree);
-
+    args.push_back(deviation);
+    #if NUM_ARGS >=21
+    args.push_back(stat->biasDegree);
+    #endif // NUM_ARGS
+    #if NUM_ARGS >=19
+    args.push_back(stat->peakDegree);
+    #endif // NUM_ARGS
     /*****to partition the frequencies into low, middle and high parts, partition points are determined**/
     //low frequency
     accumulate = 0;
@@ -327,6 +339,12 @@ void   statOfUniverse(ELEMENTMAP * eleMap, SSTATISTICS * stat)
     fprintf(logFp, "avgLowFre: %f \n", stat->avgLowFre);
     fprintf(logFp, "devLowFre: %f \n", stat->devLowFre);
     fprintf(logFp, "lFrePos:   %d \n", stat->lFrePos);
+    args.push_back(stat->avgLowFre);
+    args.push_back(stat->devLowFre);
+    #if NUM_ARGS>=20
+    args.push_back(stat->lFrePos);
+    #endif // NUM_ARGS
+
 
     deviation = 0;
     for(i=stat->lFrePos; i<stat->hFrePos; i++)
@@ -339,6 +357,11 @@ void   statOfUniverse(ELEMENTMAP * eleMap, SSTATISTICS * stat)
     fprintf(logFp, "avgMiddleFre: %f \n", stat->avgMiddleFre);
     fprintf(logFp, "devMiddleFre: %f \n", stat->devMiddleFre);
     fprintf(logFp, "hFrePos:   %d \n", stat->hFrePos);
+    args.push_back(stat->minMiddleFre);
+    args.push_back(stat->maxMiddleFre);
+    args.push_back(stat->avgMiddleFre);
+    args.push_back(stat->devMiddleFre);
+    args.push_back(stat->hFrePos);
 
     deviation = 0;
     for(i=stat->hFrePos; i<=eleMap[0].element; i++)
@@ -352,6 +375,10 @@ void   statOfUniverse(ELEMENTMAP * eleMap, SSTATISTICS * stat)
     fprintf(logFp, "devHighFre: %f \n", stat->devHighFre);
     tEnd = clock();
     fprintf(logFp, "The cost to compute statistics is %f seconds!\n",(tEnd-tStart)/((double)CLOCKS_PER_SEC));
+    args.push_back(stat->minHighFre);
+    args.push_back(stat->maxHighFre);
+    args.push_back(stat->avgHighFre);
+    args.push_back(stat->devHighFre);
 
     if(stat->biasDegree >0)
     {
@@ -450,6 +477,8 @@ void   statOfRelationS(int ** relS, SSTATISTICS * stat)
     printf("average length of sets: %.2f standard deviation: %.3f\n", avg, dev);
     stat->devLen = dev;
     fprintf(logFp,"standard deviation of set length in relation S: %f \n", dev);
+    args.push_back(avg);
+    args.push_back(dev);
 }
 
 

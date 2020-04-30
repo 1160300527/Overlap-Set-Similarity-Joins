@@ -11,11 +11,15 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="E:\LisData\Bookcrossing\pretreatmentBook\book_50k.txt" />
+				<Option parameters="E:\LisData\Kosarak\pretreatmentKosarak\kosarak_25k.txt" />
 				<Compiler>
 					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
+				<Linker>
+					<Add library="libs/python37.lib" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/sizeAware" prefix_auto="1" extension_auto="1" />
@@ -33,6 +37,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="ML.py" />
 		<Unit filename="allPairs.cpp" />
 		<Unit filename="allPairs.h" />
 		<Unit filename="dataload.cpp" />
@@ -50,6 +55,8 @@
 		<Unit filename="sizeAware.h" />
 		<Unit filename="sizeawareasfilter.cpp" />
 		<Unit filename="sizewareasfilter.h" />
+		<Unit filename="transferPy.cpp" />
+		<Unit filename="transferPy.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
